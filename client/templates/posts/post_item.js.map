@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "post_item.js",
+  "sourceRoot": "",
+  "sources": [
+    "post_item.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;EAAA,QAAQ,CAAC,QAAQ,CAAC,OAAlB,CACE;IAAA,MAAA,EAAQ,SAAA;AACN,UAAA;MAAA,CAAA,GAAI,QAAQ,CAAC,aAAT,CAAuB,GAAvB;MACJ,CAAC,CAAC,IAAF,GAAS,IAAI,CAAC;aACd,CAAC,CAAC;IAHI,CAAR;GADF;AAAA"
+}

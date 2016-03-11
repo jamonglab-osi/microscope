@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "post_list.js",
+  "sourceRoot": "",
+  "sources": [
+    "post_list.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAA,QAAA,GAAW;IACT;MACE,KAAA,EAAO,uBADT;MAEE,GAAA,EAAK,8CAFP;KADS,EAKT;MACE,KAAA,EAAO,QADT;MAEE,GAAA,EAAK,mBAFP;KALS,EAST;MACE,KAAA,EAAO,iBADT;MAEE,GAAA,EAAK,0BAFP;KATS;;;EAeX,QAAQ,CAAC,QAAQ,CAAC,OAAlB,CACE;IAAA,KAAA,EAAO,QAAP;GADF;AAfA"
+}

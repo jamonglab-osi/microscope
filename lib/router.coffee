@@ -13,9 +13,3 @@ if Meteor.isClient
 
 # 유효하지만 Data가 없는 경우의 404 Display를 위한 Iron Router hook
   Router.onBeforeAction 'dataNotFound', only:'postPage'
-
-#  Router.map ->
-#    @route 'postList', path: '/'
-#    @route 'postPage',
-#            path: '/posts/:_id'
-#            data: ()-> Posts.findOne(@.params._id)

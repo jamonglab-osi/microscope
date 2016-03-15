@@ -1,11 +1,8 @@
 //
    Created by osi on 16. 3. 14.
-
 template(name='layout')
   .container
-    header.navbar.navbar-default(role="navigation")
-      .navar-header
-        a.navbar-brand(href="{{pathFor 'postList'}}") Microscope
+    +header
     #main.row-fluid
       +yield
 

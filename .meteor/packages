@@ -24,3 +24,5 @@ coffeescript
 iron:router
 sacha:spin
 twbs:bootstrap
+accounts-password
+ian:accounts-ui-bootstrap-3

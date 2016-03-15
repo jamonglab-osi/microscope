@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "publications.js",
+  "sourceRoot": "",
+  "sources": [
+    "publications.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;EAAA,MAAM,CAAC,OAAP,CAAe,OAAf,EAAwB,SAAA;WACtB,KAAK,CAAC,IAAN,CAAA;EADsB,CAAxB;AAAA"
+}

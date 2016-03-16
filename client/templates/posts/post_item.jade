@@ -6,4 +6,12 @@ template(name='postItem')
       h3
         a(href='{{url}}') {{title}}
         span {{domain}}
+      p
+        if author
+          submitted by {{author}}
+        else
+          submitted unknown
+
+        if ownPost
+          a(href="{{pathFor 'postEdit'}}") Edit
     a.discuss.btn.btn-default(href="{{pathFor 'postPage'}}") Discuss

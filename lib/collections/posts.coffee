@@ -1,5 +1,15 @@
 #root = exports ? this
-@Posts = new Mongo.Collection('posts')
+@Posts = new Mongo.Collection 'posts'
+
+Posts.allow
+  update: (userId, post)->
+    ownsDocument userId, post
+  remove: (userId, post)->
+    ownsDocument userId, post
+
+Posts.deny
+  update: (userId, post, fieldName) ->
+    _.without(fieldName, 'url', 'title').length > 0
 
 Meteor.methods
   postInsert: (postAttributes) ->

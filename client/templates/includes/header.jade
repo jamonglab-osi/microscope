@@ -12,5 +12,10 @@ template(name='header')
           span.icon-bar
         a.navbar-brand(href="{{pathFor 'postList'}}") Microscope
       #navigation.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          // currentUser : accounts package 에서 제공하는 helper 임
+          if currentUser
+            li
+              a(href="{{pathFor 'postSubmit'}}") Submit Post
         ul.nav.navbar-nav.navbar-right
           +loginButtons

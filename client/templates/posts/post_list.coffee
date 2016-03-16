@@ -1,2 +1,2 @@
 Template.postList.helpers
-  posts: Posts.find()
+  posts: Posts.find {}, {sort: {submitted: -1}}

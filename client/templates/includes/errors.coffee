@@ -4,6 +4,10 @@ Template.errors.helpers
 
 Template.error.rendered = ->
   error = @data
-  Meteor.setTimeout ->
+
+  Meteor.setTimeout (->
     Errors.remove error._id
-  , 3000
+    return
+  ), 3000
+  return
+

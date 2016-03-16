@@ -1,4 +1,5 @@
-Template.postSubmit.events 'submit form': (e) ->
+Template.postSubmit.events
+  'submit form': (e) ->
     e.preventDefault()
     post =
       url: $(e.target).find('[name=url]').val()
@@ -12,4 +13,5 @@ Template.postSubmit.events 'submit form': (e) ->
         alert 'This link has already been posted'
 
 #      post._id = Posts.insert(post)
-      Router.go 'postPage', _id: result._id
+#      Router.go 'postPage', _id: result._id
+    Router.go 'postList'

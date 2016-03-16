@@ -1,3 +1,12 @@
+Template.postEdit.created = ->
+  Session.set 'postEditErrors', {}
+
+Template.postEdit.helpers
+  errorMessage: (field) ->
+    Session.get('postEditErrors')[field]
+  errorClass: (field) ->
+    !!Session.get('postEditErrors')[field] ? 'has-error' : ''
+
 Template.postEdit.events
   'submit form': (event)->
     event.preventDefault()
@@ -7,6 +16,9 @@ Template.postEdit.events
       url: $(event.target).find('[name=url]').val()
       title: $(event.target).find('[name=title]').val()
 
+    errors = validatePost postProperties
+    if errors.url || errors.title
+      return Session.set 'postEditErrors', errors
     Posts.update currentPostId,
       $set: postProperties,
       (error)->

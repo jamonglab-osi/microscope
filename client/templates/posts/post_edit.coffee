@@ -11,7 +11,7 @@ Template.postEdit.events
       $set: postProperties,
       (error)->
         if error
-          alert error.reason
+          throwError error.reason
         else
           Router.go 'postPage', _id:currentPostId
 
@@ -23,6 +23,6 @@ Template.postEdit.events
       Posts.remove currentPostId,
         (error)->
           if error
-            alert error.reason
+            throwError error.reason
           else
             Router.go 'postList'

@@ -11,6 +11,15 @@ Posts.deny
   update: (userId, post, fieldName) ->
     _.without(fieldName, 'url', 'title').length > 0
 
+@validatePost = (post)->
+  errors = {}
+  if !post.title
+    errors.title = "Please fill in a headline"
+  if !post.url
+    errors.url = "Please fill in a URL"
+
+  return errors
+
 Meteor.methods
   postInsert: (postAttributes) ->
     check @userId, String

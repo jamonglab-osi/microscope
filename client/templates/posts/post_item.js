@@ -8,6 +8,14 @@ Template.postItem.helpers({
     a = document.createElement('a');
     a.href = this.url;
     return a.hostname;
+  },
+  commentsCount: function() {
+    return Comments.find({
+      postId: this._id
+    }).count();
+  },
+  submittedText: function() {
+    return this.submitted.toString();
   }
 });
 

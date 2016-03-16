@@ -57,5 +57,6 @@ Meteor.methods
       userId: user._id
       author: user.username
       submitted: new Date()
+      commentCount: 0
     postId = Posts.insert post
     {_id: postId}

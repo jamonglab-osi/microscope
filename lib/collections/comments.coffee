@@ -17,4 +17,6 @@ Meteor.methods
       author: user.username
       submitted: new Date()
 
-    Comments.insert(comment)
+    Posts.update comment.postId, $inc: commentCount: 1
+
+    Comments.insert comment

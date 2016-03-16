@@ -4,7 +4,8 @@ Router.configure
   loadingTemplate: 'loading'
   notFoundTemplate: 'notFound'
   waitOn: ->
-    [Meteor.subscribe('posts'), Meteor.subscribe('comments')]
+    Meteor.subscribe 'posts'
+#    [Meteor.subscribe('posts'), Meteor.subscribe('comments')]
 
 #Router.route '/',
 #  name:'postList'
@@ -22,6 +23,8 @@ Router.map ->
     path: '/'
   @route 'postPage',
     path: '/posts/:_id'
+    waitOn: ->
+      Meteor.subscribe 'comments', @params._id
     data: ->
       Posts.findOne @params._id
   @route 'postEdit',
